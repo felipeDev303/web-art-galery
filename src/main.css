@@ -4,7 +4,6 @@
 
 body {
   padding-top: 56px;
-  background-color: #ead8c0;
 }
 
 .section-padding {
@@ -81,6 +80,10 @@ body {
 
 .artists .card-body {
   font-size: 15px;
+}
+
+.form {
+  background-color: #f8f9fa;
 }
 
 @media (max-width: 768px) {
