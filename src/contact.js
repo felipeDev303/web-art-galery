@@ -96,8 +96,10 @@ form.addEventListener("submit", function (event) {
 
   if (isFormValid) {
     // Aquí puede continuar con el envío del formulario
-    console.log("Form is valid and ready to submit.");
+    console.log("El formulario es válido.");
   } else {
-    console.log("Form is invalid. Please correct the errors and try again.");
+    console.log(
+      "El formulario no es válido. Por favor, corrija los errores e inténtelo nuevamente."
+    );
   }
 });
