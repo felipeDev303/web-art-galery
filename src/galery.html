@@ -4,44 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galería de arte</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="main.css"> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="main.css" />
   </head>
-  
-  <body>
-   <!--Navbar-->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><span>ArtGalery</span></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="galery.html">Galería</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form.html">Contacto</a>
-          </li>
-        </ul>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><span>ArtGalery</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galery.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-   </nav>
-   <!--Artistas-->
+    </nav>
+    <!--Artistas-->
     <section class="obras section-padding">
       <div class="container">
         <div class="row">
@@ -52,7 +60,7 @@
             </div>
           </div>
         </div>
-
+        <!--Roberto Matta-->
         <div class="row">
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card text-light text-center bg-dark pb-2">
@@ -66,9 +74,108 @@
                   />
                   <h3 class="card-title py-2">Roberto Matta</h3>
                   <p class="lead">"Ojo" con los desarrolladores</p>
-                  <button class="btn bg-primary text-white">
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-matta"
+                  >
                     Más información
                   </button>
+                  <button
+                    class="btn btn-danger"
+                    onclick="deleteImage(event, this)"
+                  >
+                    Eliminar
+                  </button>
+
+                  <!--Modal Matta-->
+                  <div
+                    class="modal fade"
+                    id="modal-matta"
+                    tabindex="-1"
+                    aria-labelledby="mattaModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+                    >
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5
+                            class="modal-title text-dark"
+                            id="mattaModalLabel"
+                          >
+                            Roberto Matta
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+
+                        <div class="modal-body text-dark">
+                          <p>
+                            Roberto Sebastián Matta Echaurren nació el 11 de
+                            noviembre de 1911 en Santiago, Chile. Estudió
+                            arquitectura en la Pontificia Universidad Católica
+                            de Chile, titulándose en 1935, y tuvo como maestros
+                            a reconocidos artistas como Hernán Gazmuri, Ricardo
+                            Richon Brunet, Carlos Lagarrigue y Virginio Arias.
+                            En 1938 se trasladó a Nueva York, donde desarrolló
+                            una intensa actividad artística y se vinculó con
+                            destacados pintores de la Escuela de Nueva York,
+                            como Jackson Pollock y Arshile Gorky, influyendo en
+                            el desarrollo del expresionismo abstracto. En 1948
+                            regresó a Europa, donde continuó su carrera,
+                            viviendo en diversas ciudades como París, Roma y
+                            Tarquinia, y experimentando con distintos estilos y
+                            técnicas.
+                          </p>
+                          <p>
+                            Matta es conocido principalmente por sus obras
+                            surrealistas, en las cuales utilizaba el automatismo
+                            psíquico para explorar las visiones más recónditas
+                            de la mente, creando lo que él denominó "morfologías
+                            psicológicas" o "inscapes". A partir de la década de
+                            1950, su obra comenzó a incorporar elementos
+                            figurativos y referencias a la coyuntura histórica y
+                            política, reflejando su creciente conciencia
+                            política y su compromiso con causas de liberación
+                            mundial. Este cambio se acentuó con su apoyo a la
+                            Revolución cubana y al gobierno de Salvador Allende
+                            en Chile. Además de su prolífica obra pictórica,
+                            Matta realizó trabajos gráficos y escultóricos, y en
+                            sus últimos años experimentó con técnicas digitales.
+                          </p>
+                          <p>
+                            Roberto Matta expuso en numerosos museos y centros
+                            de arte alrededor del mundo y es considerado uno de
+                            los artistas más influyentes del siglo XX. Recibió
+                            múltiples distinciones, entre ellas el Premio
+                            Nacional de Arte de Chile en 1990, el Premio
+                            Príncipe de Asturias de las Artes en 1992 y el
+                            Praemium Imperiale de Pintura en 1995. Aunque
+                            desarrolló gran parte de su carrera fuera de Chile,
+                            mantuvo un vínculo constante con su país de origen,
+                            visitándolo en varias ocasiones para realizar
+                            exposiciones y actividades culturales. Matta
+                            falleció el 23 de noviembre de 2002 en
+                            Civitavecchia, Italia.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            class="btn btn-danger"
+                            data-bs-dismiss="modal"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,9 +193,86 @@
                   />
                   <h3 class="card-title py-2">Mario carreño</h3>
                   <p class="lead">Las computadoras de la noche</p>
-                  <button class="btn bg-primary text-white">
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-carreno"
+                  >
                     Más información
                   </button>
+                  <button
+                    class="btn btn-danger"
+                    onclick="deleteImage(event, this)"
+                  >
+                    Eliminar
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="modal-carreno"
+                    tabindex="-1"
+                    aria-labelledby="carrenoModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+                    >
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-dark">Mario carreño</h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+
+                        <div class="modal-body text-dark">
+                          <p>
+                            Mario Carreño Morales nació el 24 de abril de 1913
+                            en La Habana, Cuba. Se formó en la Academia de San
+                            Alejandro en La Habana y continuó sus estudios en
+                            Madrid y París. Carreño es conocido por su estilo
+                            modernista, que combina elementos de la pintura
+                            figurativa con una vibrante paleta de colores y un
+                            enfoque en la representación de escenas cotidianas y
+                            retratos. Su obra refleja una profunda conexión con
+                            la cultura y el paisaje de América Latina.
+                          </p>
+                          <p>
+                            A lo largo de su carrera, Carreño participó en
+                            numerosas exposiciones en América y Europa, y su
+                            trabajo fue reconocido con varios premios, entre
+                            ellos el Premio Nacional de Artes Plásticas de Cuba
+                            en 1990. En la década de 1950, se trasladó a Chile,
+                            donde continuó desarrollando su carrera artística y
+                            contribuyendo al panorama cultural del país. Carreño
+                            se convirtió en una figura influyente en el arte
+                            chileno, tanto por su obra como por su labor
+                            docente.
+                          </p>
+                          <p>
+                            Mario Carreño es recordado no solo por su talento
+                            artístico, sino también por su compromiso con la
+                            educación y la promoción del arte. Su legado incluye
+                            una vasta producción de obras que se encuentran en
+                            importantes colecciones y museos de todo el mundo.
+                            Carreño falleció el 20 de diciembre de 1999 en
+                            Santiago, Chile, dejando un impacto duradero en la
+                            historia del arte latinoamericano.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            class="btn btn-danger"
+                            data-bs-dismiss="modal"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,9 +290,87 @@
                   />
                   <h3 class="card-title py-2">Eduardo Vilches</h3>
                   <p class="lead">Mano III</p>
-                  <button class="btn bg-primary text-white">
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-vilches"
+                  >
                     Más información
                   </button>
+                  <button
+                    class="btn btn-danger"
+                    onclick="deleteImage(event, this)"
+                  >
+                    Eliminar
+                  </button>
+                  <!-- Modal Vilches-->
+                  <div
+                    class="modal fade"
+                    id="modal-vilches"
+                    tabindex="-1"
+                    aria-labelledby="vilchesModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+                    >
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-dark">Eduardo Vilches</h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+
+                        <div class="modal-body text-dark">
+                          <p>
+                            Eduardo Vilches nació el 16 de mayo de 1932 en
+                            Concepción, Chile. Se formó en la Escuela de Bellas
+                            Artes de la Universidad de Chile, donde se
+                            especializó en grabado y pintura. Vilches es
+                            reconocido por su estilo abstracto y expresionista,
+                            caracterizado por una exploración intensa del color
+                            y la forma, a menudo utilizando elementos
+                            figurativos abstractos. Además de su obra pictórica,
+                            ha tenido una destacada carrera como profesor y
+                            promotor del arte en Chile.
+                          </p>
+                          <p>
+                            A lo largo de su carrera, Vilches ha participado en
+                            numerosas exposiciones tanto en Chile como en el
+                            extranjero. Su trabajo ha sido reconocido con
+                            diversos premios y distinciones, entre ellos el
+                            Premio Nacional de Arte de Chile en el año 2000.
+                            Vilches ha sido una figura central en el desarrollo
+                            del grabado en Chile, y su influencia se ha
+                            extendido a través de varias generaciones de
+                            artistas.
+                          </p>
+                          <p>
+                            Además de su actividad artística, Vilches ha tenido
+                            una destacada labor como docente en la Pontificia
+                            Universidad Católica de Chile, donde ha influido en
+                            la formación de numerosos artistas contemporáneos.
+                            Su obra se caracteriza por una constante
+                            experimentación y renovación, manteniéndose siempre
+                            relevante en el panorama artístico chileno e
+                            internacional.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            class="btn btn-danger"
+                            data-bs-dismiss="modal"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -126,9 +388,91 @@
                   />
                   <h3 class="card-title py-2">Israel Roa</h3>
                   <p class="lead">Loicas en Angol</p>
-                  <button class="btn bg-primary text-white">
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-matta"
+                  >
                     Más información
                   </button>
+                  <button
+                    class="btn btn-danger"
+                    onclick="deleteImage(event, this)"
+                  >
+                    Eliminar
+                  </button>
+                  <!-- Modal Roa-->
+                  <div
+                    class="modal fade"
+                    id="modal-roa"
+                    tabindex="-1"
+                    aria-labelledby="roaModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+                    >
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-dark" id="roaModalLabel">Israel Roa</h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        </div>
+
+                        <div class="modal-body text-dark">
+                          <p>
+                            Israel Roa Villagra nació el 28 de mayo de 1909 en
+                            Angol, Chile. Desde joven mostró un gran interés por
+                            la pintura, lo que lo llevó a ingresar a la Escuela
+                            de Bellas Artes de la Universidad de Chile, donde
+                            estudió bajo la tutela de maestros como Ricardo
+                            Richon Brunet y Juan Francisco González. Roa
+                            desarrolló un estilo caracterizado por trazos
+                            fluidos y definidos, y una exaltación del color,
+                            abordando temáticas como paisajes, escenas
+                            costumbristas, retratos y naturalezas muertas.
+                          </p>
+                          <p>
+                            Roa participó en numerosas exposiciones tanto en
+                            Chile como en el extranjero, y su obra fue
+                            reconocida con múltiples premios, entre ellos el
+                            Premio Nacional de Arte de Chile en 1985. Su carrera
+                            estuvo marcada por una constante búsqueda de
+                            perfeccionamiento, obteniendo becas para estudiar en
+                            Berlín y Brasil, lo que enriqueció su técnica y
+                            visión artística. Además de su obra pictórica, Roa
+                            tuvo una destacada labor como docente, fundando la
+                            cátedra de acuarela en la Escuela de Bellas Artes,
+                            donde enseñó hasta 1969.
+                          </p>
+                          <p>
+                            Aunque es considerado parte de la Generación del 40,
+                            Roa se distanció de esta clasificación, prefiriendo
+                            describir su trabajo como interpretaciones
+                            espontáneas del paisaje chileno. Su legado incluye
+                            una vasta producción artística y una influencia
+                            significativa en el desarrollo del arte en Chile.
+                            Israel Roa falleció el 13 de mayo de 2002 en
+                            Santiago, Chile, dejando una huella perdurable en la
+                            historia del arte chileno.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            class="btn btn-danger"
+                            data-bs-dismiss="modal"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -137,102 +481,7 @@
       </div>
     </section>
 
-    <section class="artists section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-header text-center text-dark pb-5">
-              <h2 class="section-title">Nuestros Artistas</h2>
-              <p>Conoce a nuestros artistas</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card text-center bg-dark">
-              <div class="card-body text-white">
-                <img
-                  src="img/robertomatta.jpg"
-                  alt="Roberto Matta"
-                  class="img-fluid rounded-circle"
-                />
-                <h3 class="card-title py-2">Roberto Matta</h3>
-                <p class="card-text">
-                  Roberto Matta nació el 11 de noviembre de 1911 en Santiago,
-                  Chile. Destacó como un exponente del surrealismo, explorando
-                  los reinos del subconsciente y la imaginación a través de
-                  obras que presentaban formas orgánicas y paisajes oníricos. En
-                  1992, fue galardonado con el Premio Nacional de Arte de Chile.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card text-center bg-dark">
-              <div class="card-body text-white">
-                <img
-                  src="img/mariocarreño.jpg"
-                  alt="Mario Carreño"
-                  class="img-fluid rounded-circle"
-                />
-                <h3 class="card-title py-2">Mario Carreño</h3>
-                <p class="card-text">
-                  Mario Carreño, nacido el 24 de abril de 1913 en Caibarién,
-                  Cuba, fue un pintor asociado al modernismo. Su obra se
-                  caracterizaba por una paleta de colores vibrantes y un enfoque
-                  en la representación figurativa, especialmente de escenas
-                  cotidianas y retratos. En 1982, fue galardonado con el Premio
-                  Nacional de Artes de Chile.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card text-center bg-dark">
-              <div class="card-body text-white">
-                <img
-                  src="img/eduardovilches.jpg"
-                  alt="Eduardo Vilches"
-                  class="img-fluid rounded-circle"
-                />
-                <h3 class="card-title py-2">Eduardo Vilches</h3>
-                <p class="card-text">
-                  Eduardo Vilches, nacido el 16 de mayo de 1930 en Santiago,
-                  Chile, se destacó como pintor y grabador con un estilo
-                  abstracto y expresionista. Sus obras presentaban una intensa
-                  exploración del color y la forma, con elementos figurativos
-                  abstractos. En el año 2000, recibió el Premio Nacional de Arte
-                  de Chile.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card text-center bg-dark">
-              <div class="card-body text-white">
-                <img
-                  src="img/israelroa.jpg"
-                  alt="Israel Roa"
-                  class="img-fluid rounded-circle"
-                />
-                <h3 class="card-title py-2">Israel Roa</h3>
-                <p class="card-text">
-                  Israel Roa nació el 28 de mayo de 1909 en Angol, Chile, y se
-                  destacó como pintor. Su obra, que abarcaba principalmente el
-                  óleo y la acuarela, se caracterizaba por trazos fluidos y
-                  definidos, así como por la exaltación del color. En 1985,
-                  recibió el Premio Nacional de Arte de Chile.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!--Footer-->
     <footer class="bg-dark text-light text-center p-2">
       <div class="container">
         <div class="row">
@@ -241,5 +490,13 @@
           </div>
         </div>
       </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
